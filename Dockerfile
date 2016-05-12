@@ -1,6 +1,6 @@
 FROM ruby:2.1
 
-MAINTAINER John Moberly
+MAINTAINER John <jonnymo5@gmail.com>
 
 RUN curl -sL https://deb.nodesource.com/setup_5.x | bash
 RUN apt-get update
