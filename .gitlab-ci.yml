@@ -3,6 +3,8 @@ before_script:
 
 build_image:
   script:
-    - docker build -t jonnymo5/jekyll-build .
-    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-    - docker push jonnymo5/jekyll-build
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN hub.cantstopclapping.com
+    - docker build -t hub.cantstopclapping.com/docker/jekyll-build .
+    - docker push hub.cantstopclapping.com/docker/jekyll-build:latest
+  only:
+    -master
