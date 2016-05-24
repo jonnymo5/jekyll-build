@@ -7,4 +7,4 @@ build_image:
     - docker build -t hub.cantstopclapping.com/docker/jekyll-build .
     - docker push hub.cantstopclapping.com/docker/jekyll-build:latest
   only:
-    -master
+    - master
