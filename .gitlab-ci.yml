@@ -3,6 +3,7 @@ before_script:
 
 build_image:
   script:
+    - docker -v
     - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN hub.cantstopclapping.com
     - docker build -t hub.cantstopclapping.com/docker/jekyll-build .
     - docker push hub.cantstopclapping.com/docker/jekyll-build:latest
