@@ -3,6 +3,7 @@ build_image:
     - docker -v
     - docker login -u $DOCKER_USER -p $DOCKER_PASS hub.cantstopclapping.com
     - docker build -t hub.cantstopclapping.com/docker/jekyll-build .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS hub.cantstopclapping.com
     - docker push hub.cantstopclapping.com/docker/jekyll-build:latest
   only:
     - master
